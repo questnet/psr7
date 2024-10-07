@@ -13,7 +13,7 @@ use Psr\Http\Message\StreamInterface;
 trait MessageTrait
 {
     /** @var string[][] Map of all registered headers, as original name => array of values */
-    private $headers = [];
+    /* private */ public $headers = [];   // `public` needed for callbuilder
 
     /** @var string[] Map of lowercase header name => original name at registration */
     private $headerNames = [];
